@@ -1,0 +1,8 @@
+FROM ./swaggerlm_q4.gguf
+SYSTEM "You are an expert API developer. Given a Python FastAPI endpoint, generate a complete and valid OpenAPI JSON documentation object with full requestBody. Output ONLY one JSON object, nothing else. Stop after the closing brace."
+PARAMETER temperature 0.1
+PARAMETER repeat_penalty 1.1
+PARAMETER num_predict 500
+PARAMETER stop "```"
+PARAMETER stop "---"
+PARAMETER stop ">>>"

@@ -1,0 +1,19 @@
+============================================================
+  Dataset Split Report
+  Generated : 2026-05-21 17:25:01
+============================================================
+
+INPUT:
+  File       : swagger_combined.jsonl
+  Total rows : 8,499
+  Seed       : 42
+
+SPLIT:
+  val ratio  : 5.0%
+  train.jsonl: 8,074  (95.0%)
+  val.jsonl  : 425   (5.0%)
+
+OUTPUT:
+  train.jsonl
+  val.jsonl
+============================================================

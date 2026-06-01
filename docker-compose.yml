@@ -1,0 +1,52 @@
+services:
+  # ── LLM inference server ──────────────────────────────
+  ollama:
+    image: ollama/ollama:latest
+    container_name: swaggerlm-ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+      - ./model:/model          # mount folder with GGUF + Modelfile
+    healthcheck:
+      test: ["CMD", "ollama", "list"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ── Load model into Ollama (runs once, then exits) ────
+  ollama-init:
+    image: ollama/ollama:latest
+    container_name: swaggerlm-init
+    depends_on:
+      ollama:
+        condition: service_healthy
+    volumes:
+      - ollama_data:/root/.ollama
+      - ./model:/model
+    entrypoint: ["ollama", "create", "swaggerlm", "-f", "/model/Modelfile"]
+    environment:
+      - OLLAMA_HOST=ollama:11434
+    restart: "no"
+
+  # ── SwaggerLM application ─────────────────────────────
+  swaggerlm:
+    build: .
+    container_name: swaggerlm-app
+    ports:
+      - "8000:8000"
+    depends_on:
+      ollama:
+        condition: service_healthy
+    environment:
+      - OLLAMA_URL=http://ollama:11434/api/generate
+      - PYTHONUNBUFFERED=1
+    command: >
+      python serve_fastapi.py
+      --input demo_app.py
+      --model swaggerlm
+      --port 8000
+      --real-server http://host.docker.internal:8001
+
+volumes:
+  ollama_data:

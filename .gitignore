@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+*.gguf
+*.safetensors
+.env
+ollama_data/
+*.egg-info/
+dist/results/*.jsonl
+*.jsonl

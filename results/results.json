@@ -1,0 +1,1750 @@
+{
+  "config": {
+    "base_model": "qwen2.5-coder:3b",
+    "finetuned_model": "swaggerlm",
+    "data_file": "val.jsonl",
+    "num_samples": 50
+  },
+  "aggregated": {
+    "qwen2.5-coder:3b": {
+      "total": 50,
+      "json_valid": 28,
+      "json_valid_pct": 56.0,
+      "openapi_valid": 0,
+      "openapi_valid_pct": 0.0,
+      "field_rates": {
+        "summary": 0.0,
+        "responses": 0.0,
+        "description": 0.0,
+        "parameters": 0.0,
+        "requestBody": 0.0,
+        "operationId": 0.0,
+        "tags": 0.0
+      },
+      "structural_completeness_pct": 0.0,
+      "avg_bleu": 0.1482,
+      "avg_time_seconds": 6.86
+    },
+    "swaggerlm": {
+      "total": 50,
+      "json_valid": 48,
+      "json_valid_pct": 96.0,
+      "openapi_valid": 48,
+      "openapi_valid_pct": 96.0,
+      "field_rates": {
+        "summary": 32.0,
+        "responses": 96.0,
+        "description": 66.0,
+        "parameters": 70.0,
+        "requestBody": 18.0,
+        "operationId": 54.0,
+        "tags": 38.0
+      },
+      "structural_completeness_pct": 53.4,
+      "avg_bleu": 0.0958,
+      "avg_time_seconds": 3.99
+    }
+  },
+  "per_sample": [
+    {
+      "qwen2.5-coder:3b": {
+        "raw_output": "```json\n{\n  \"openapi\": \"3.0.2\",\n  \"info\": {\n    \"title\": \"API Documentation\",\n    \"version\": \"1.0.0\"\n  },\n  \"paths\": {\n    \"/sms/outgoing/send\": {\n      \"post\": {\n        \"summary\": \"Submit 1 or more SMS messages to be sent by WinSMS\",\n        \"description\": \"\",\n        \"operationId\": \"smssend\",\n        \"parameters\": [],\n        \"requestBody\": {\n          \"required\": true,\n          \"content\": {\n            \"application/json\": {\n              \"schema\": {\n                \"$ref\": \"#/components/sch",
+        "json_valid": false,
+        "openapi_valid": false,
+        "fields": {
+          "summary": false,
+          "responses": false,
+          "description": false,
+          "parameters": false,
+          "requestBody": false,
+          "operationId": false,
+          "tags": false
+        },
+        "bleu": 0.17216771275279438,
+        "time_seconds": 5.78
+      },
+      "swaggerlm": {
+        "raw_output": "{\n  \"description\": \"Submit 1 or more SMS messages to be sent by WinSMS\",\n  \"requestBody\": {\n    \"required\": true,\n    \"content\": {\n      \"application/json\": {\n        \"schema\": {\n          \"type\": \"object\"\n        }\n      }\n    }\n  },\n  \"responses\": {\n    \"200\": {\n      \"description\": \"Successful response\",\n      \"content\": {\n        \"application/json\": {\n          \"schema\": {\n            \"type\": \"object\"\n          }\n        }\n      }\n    },\n    \"401\": {\n      \"description\": \"Unauthorized - Inva",
+        "json_valid": true,
+        "openapi_valid": true,
+        "fields": {
+          "summary": false,
+          "responses": true,
+          "description": true,
+          "parameters": false,
+          "requestBody": true,
+          "operationId": false,
+          "tags": false
+        },
+        "bleu": 0.05418119470172191,
+        "time_seconds": 3.57
+      }
+    },
+    {
+      "qwen2.5-coder:3b": {
+        "raw_output": "```json\n{\n  \"openapi\": \"3.0.1\",\n  \"info\": {\n    \"title\": \"API Documentation\",\n    \"version\": \"1.0.0\"\n  },\n  \"paths\": {\n    \"/search/{versionNumber}/reverseGeocode/crossStreet/{position}.{ext}\": {\n      \"get\": {\n        \"summary\": \"Cross Street lookup\",\n        \"description\": \"This endpoint performs a cross street lookup.\",\n        \"parameters\": [\n          {\n            \"name\": \"versionNumber\",\n            \"in\": \"path\",\n            \"required\": true,\n            \"schema\": {\n              \"type\": ",
+        "json_valid": false,
+        "openapi_valid": false,
+        "fields": {
+          "summary": false,
+          "responses": false,
+          "description": false,
+          "parameters": false,
+          "requestBody": false,
+          "operationId": false,
+          "tags": false
+        },
+        "bleu": 0.3120215945365648,
+        "time_seconds": 9.23
+      },
+      "swaggerlm": {
+        "raw_output": "{\n  \"description\": \"Cross Street lookup\",\n  \"operationId\": \"get_search_versionnumber_reversegeocode_crossstreet_position_._ext\",\n  \"parameters\": [\n    {\n      \"name\": \"param\",\n      \"in\": \"query\",\n      \"required\": false,\n      \"schema\": {\n        \"type\": \"string\"\n      }\n    },\n    {\n      \"name\": \"param\",\n      \"in\": \"query\",\n      \"required\": false,\n      \"schema\": {\n        \"type\": \"string\"\n      }\n    },\n    {\n      \"name\": \"param\",\n      \"in\": \"query\",\n      \"required\": false,\n      \"schem",
+        "json_valid": false,
+        "openapi_valid": false,
+        "fields": {
+          "summary": false,
+          "responses": false,
+          "description": false,
+          "parameters": false,
+          "requestBody": false,
+          "operationId": false,
+          "tags": false
+        },
+        "bleu": 0.3029159737246233,
+        "time_seconds": 9.15
+      }
+    },
+    {
+      "qwen2.5-coder:3b": {
+        "raw_output": "```json\n{\n  \"openapi\": \"3.0.2\",\n  \"info\": {\n    \"title\": \"FastAPI API Documentation\",\n    \"version\": \"1.0.0\"\n  },\n  \"paths\": {\n    \"/internal_mcp_roots_list\": {\n      \"post\": {\n        \"summary\": \"Handle trusted roots/list requests forwarded from the Rust runtime.\",\n        \"description\": \"This endpoint handles requests to list trusted internal MCP roots, forwarding them from a Rust runtime environment. It processes incoming JSON payloads and returns the results in ORJSON format.\",\n        \"requ",
+        "json_valid": false,
+        "openapi_valid": false,
+        "fields": {
+          "summary": false,
+          "responses": false,
+          "description": false,
+          "parameters": false,
+          "requestBody": false,
+          "operationId": false,
+          "tags": false
+        },
+        "bleu": 0.12425633978333528,
+        "time_seconds": 9.49
+      },
+      "swaggerlm": {
+        "raw_output": "{\n  \"path\": \"/trusted-roots/list\",\n  \"method\": \"post\",\n  \"operation\": {\n    \"summary\": \"Handle Internal Mcp Roots List\",\n    \"operationId\": \"handle_internal_mcp_roots_list\",\n    \"parameters\": [],\n    \"responses\": {\n      \"200\": {\n        \"description\": \"Successful response\",\n        \"content\": {\n          \"application/json\": {\n            \"schema\": {\n              \"type\": \"object\"\n            }\n          }\n        }\n      },\n      \"422\": {\n        \"description\": \"Validation Error\"\n      }\n    },",
+        "json_valid": true,
+        "openapi_valid": true,
+        "fields": {
+          "summary": true,
+          "responses": true,
+          "description": false,
+          "parameters": true,
+          "requestBody": true,
+          "operationId": true,
+          "tags": true
+        },
+        "bleu": 0.08313942738710922,
+        "time_seconds": 3.97
+      }
+    },
+    {
+      "qwen2.5-coder:3b": {
+        "raw_output": "```json\n{\n  \"openapi\": \"3.0.1\",\n  \"info\": {\n    \"title\": \"Organizer Meetings API\",\n    \"version\": \"1.0.0\"\n  },\n  \"paths\": {\n    \"/organizers/{organizerKey}/upcomingMeetings\": {\n      \"get\": {\n        \"summary\": \"Get upcoming meetings for a specified organizer\",\n        \"description\": \"Retrieve all upcoming meetings associated with the given organizer key.\",\n        \"parameters\": [\n          {\n            \"name\": \"organizerKey\",\n            \"in\": \"path\",\n            \"required\": true,\n            ",
+        "json_valid": false,
+        "openapi_valid": false,
+        "fields": {
+          "summary": false,
+          "responses": false,
+          "description": false,
+          "parameters": false,
+          "requestBody": false,
+          "operationId": false,
+          "tags": false
+        },
+        "bleu": 0.12456363580096012,
+        "time_seconds": 5.67
+      },
+      "swaggerlm": {
+        "raw_output": "{\n  \"description\": \"Get upcoming meetings for a specified organizer\",\n  \"operationId\": \"get_organizers_organizerkey_upcomingmeetings\",\n  \"responses\": {\n    \"200\": {\n      \"description\": \"OK\"\n    }\n  },\n  \"path\": \"/organizers/{organizerKey}/upcomingMeetings\",\n  \"method\": \"get\"\n}",
+        "json_valid": true,
+        "openapi_valid": true,
+        "fields": {
+          "summary": false,
+          "responses": true,
+          "description": true,
+          "parameters": false,
+          "requestBody": false,
+          "operationId": true,
+          "tags": false
+        },
+        "bleu": 0.020104189455542716,
+        "time_seconds": 1.61
+      }
+    },
+    {
+      "qwen2.5-coder:3b": {
+        "raw_output": "```json\n{\n  \"openapi\": \"3.0.1\",\n  \"info\": {\n    \"title\": \"API Documentation\",\n    \"version\": \"1.0.0\"\n  },\n  \"paths\": {\n    \"/certificates/issuers/{issuer-name}\": {\n      \"get\": {\n        \"summary\": \"The GetCertificateIssuer operation returns the specified certificate issuer resources in the specified key vault\",\n        \"description\": \"\",\n        \"parameters\": [\n          {\n            \"name\": \"issuer_name\",\n            \"in\": \"path\",\n            \"required\": true,\n            \"schema\": {\n        ",
+        "json_valid": false,
+        "openapi_valid": false,
+        "fields": {
+          "summary": false,
+          "responses": false,
+          "description": false,
+          "parameters": false,
+          "requestBody": false,
+          "operationId": false,
+          "tags": false
+        },
+        "bleu": 0.20305965694542497,
+        "time_seconds": 5.78
+      },
+      "swaggerlm": {
+        "raw_output": "{\n  \"description\": \"The GetCertificateIssuer operation returns the specified certificate issuer resources in the specified key vault.\",\n  \"parameters\": [\n    {\n      \"name\": \"issuer-name\",\n      \"in\": \"path\",\n      \"required\": true,\n      \"schema\": {\n        \"type\": \"string\"\n      }\n    },\n    {\n      \"name\": \"param\",\n      \"in\": \"query\",\n      \"required\": false,\n      \"schema\": {\n        \"type\": \"string\"\n      }\n    }\n  ],\n  \"responses\": {\n    \"200\": {\n      \"description\": \"OK\",\n      \"content\"",
+        "json_valid": true,
+        "openapi_valid": true,
+        "fields": {
+          "summary": false,
+          "responses": true,
+          "description": true,
+          "parameters": true,
+          "requestBody": false,
+          "operationId": false,
+          "tags": false
+        },
+        "bleu": 0.1348616013241612,
+        "time_seconds": 3.6
+      }
+    },
+    {
+      "qwen2.5-coder:3b": {
+        "raw_output": "```json\n{\n  \"openapi\": \"3.0.1\",\n  \"info\": {\n    \"title\": \"API Documentation\",\n    \"version\": \"1.0.0\"\n  },\n  \"paths\": {\n    \"/s1/sentiment\": {\n      \"get\": {\n        \"summary\": \"sentimentGet\",\n        \"description\": \"\",\n        \"parameters\": [\n          {\n            \"name\": \"id\",\n            \"in\": \"query\",\n            \"required\": false,\n            \"schema\": {\n              \"type\": \"string\"\n            }\n          },\n          {\n            \"name\": \"text\",\n            \"in\": \"query\",\n            ",
+        "json_valid": false,
+        "openapi_valid": false,
+        "fields": {
+          "summary": false,
+          "responses": false,
+          "description": false,
+          "parameters": false,
+          "requestBody": false,
+          "operationId": false,
+          "tags": false
+        },
+        "bleu": 0.2907173313182768,
+        "time_seconds": 8.07
+      },
+      "swaggerlm": {
+        "raw_output": "{\n  \"summary\": \"sentimentGet\",\n  \"operationId\": \"sentimentget\",\n  \"tags\": [\n    \"s1\"\n  ],\n  \"parameters\": [\n    {\n      \"name\": \"id\",\n      \"in\": \"query\",\n      \"required\": false,\n      \"description\": \"\"\n    },\n    {\n      \"name\": \"text\",\n      \"in\": \"query\",\n      \"required\": false,\n      \"description\": \"\"\n    },\n    {\n      \"name\": \"url\",\n      \"in\": \"query\",\n      \"required\": false,\n      \"description\": \"\"\n    },\n    {\n      \"name\": \"extractor\",\n      \"in\": \"query\",\n      \"required\": false,\n ",
+        "json_valid": true,
+        "openapi_valid": true,
+        "fields": {
+          "summary": true,
+          "responses": true,
+          "description": false,
+          "parameters": true,
+          "requestBody": false,
+          "operationId": true,
+          "tags": true
+        },
+        "bleu": 0.011261410845019146,
+        "time_seconds": 4.61
+      }
+    },
+    {
+      "qwen2.5-coder:3b": {
+        "raw_output": "```json\n{\n  \"openapi\": \"3.0.1\",\n  \"info\": {\n    \"title\": \"API Documentation\",\n    \"version\": \"1.0.0\"\n  },\n  \"paths\": {\n    \"/checkout/{tenant}/{checkoutId}\": {\n      \"get\": {\n        \"summary\": \"Get the details required to fulfil an order\",\n        \"description\": \"Retrieve the checkout details for a specific tenant and checkout ID.\",\n        \"parameters\": [\n          {\n            \"name\": \"tenant\",\n            \"in\": \"path\",\n            \"required\": true,\n            \"schema\": {\n              \"typ",
+        "json_valid": false,
+        "openapi_valid": false,
+        "fields": {
+          "summary": false,
+          "responses": false,
+          "description": false,
+          "parameters": false,
+          "requestBody": false,
+          "operationId": false,
+          "tags": false
+        },
+        "bleu": 0.24416046334981908,
+        "time_seconds": 9.74
+      },
+      "swaggerlm": {
+        "raw_output": "{\n  \"description\": \"Get the details required to fulfil an order, which includes:\\n- The restaurant selling the items to be purchased\\n- The customer making the purchase\\n- How, where and when the items will be received.\\n- Any additional information that needs to be provided by the restaurant or customer (e.g. special instructions for delivery).\\n- Any payment details required to complete the transaction.\",\n  \"operationId\": \"get_checkout_tenant_checkoutid\",\n  \"parameters\": [\n    {\n      \"name\": ",
+        "json_valid": true,
+        "openapi_valid": true,
+        "fields": {
+          "summary": false,
+          "responses": true,
+          "description": true,
+          "parameters": true,
+          "requestBody": false,
+          "operationId": true,
+          "tags": false
+        },
+        "bleu": 0.11854893146400029,
+        "time_seconds": 8.89
+      }
+    },
+    {
+      "qwen2.5-coder:3b": {
+        "raw_output": "```json\n{\n  \"openapi\": \"3.0.1\",\n  \"info\": {\n    \"title\": \"API Documentation\",\n    \"version\": \"1.0.0\"\n  },\n  \"paths\": {\n    \"/stromkonto/choices\": {\n      \"get\": {\n        \"summary\": \"Signable choices (contract changes) for customer\",\n        \"description\": \"Retrieves all signable choices for a customer.\",\n        \"parameters\": [\n          {\n            \"name\": \"account\",\n            \"in\": \"query\",\n            \"required\": false,\n            \"schema\": {\n              \"type\": \"string\"\n            }",
+        "json_valid": true,
+        "openapi_valid": false,
+        "fields": {
+          "summary": false,
+          "responses": false,
+          "description": false,
+          "parameters": false,
+          "requestBody": false,
+          "operationId": false,
+          "tags": false
+        },
+        "bleu": 0.07218846732241707,
+        "time_seconds": 6.09
+      },
+      "swaggerlm": {
+        "raw_output": "{\n  \"description\": \"Signable choices (contract changes) for customer\",\n  \"operationId\": \"stromkontoChoices\",\n  \"tags\": [\n    \"stromkonto\"\n  ],\n  \"parameters\": [\n    {\n      \"name\": \"account\",\n      \"in\": \"query\",\n      \"required\": false,\n      \"description\": \"Account number of the customer\",\n      \"schema\": {\n        \"type\": \"string\"\n      }\n    }\n  ],\n  \"responses\": {\n    \"200\": {\n      \"description\": \"OK\",\n      \"content\": {\n        \"application/json\": {\n          \"schema\": {\n            \"type",
+        "json_valid": true,
+        "openapi_valid": true,
+        "fields": {
+          "summary": false,
+          "responses": true,
+          "description": true,
+          "parameters": true,
+          "requestBody": false,
+          "operationId": true,
+          "tags": true
+        },
+        "bleu": 0.06980360048173927,
+        "time_seconds": 3.9
+      }
+    },
+    {
+      "qwen2.5-coder:3b": {
+        "raw_output": "```json\n{\n  \"openapi\": \"3.0.1\",\n  \"info\": {\n    \"title\": \"API Documentation\",\n    \"version\": \"1.0.0\"\n  },\n  \"paths\": {\n    \"/attempted-delivery-query-resolved\": {\n      \"put\": {\n        \"summary\": \"This webhook will be invoked whenever an attempted delivery query has been resolved\",\n        \"description\": \"\",\n        \"parameters\": [],\n        \"requestBody\": {\n          \"content\": {\n            \"application/json\": {\n              \"schema\": {\n                \"$ref\": \"#/components/schemas/Attempted",
+        "json_valid": true,
+        "openapi_valid": false,
+        "fields": {
+          "summary": false,
+          "responses": false,
+          "description": false,
+          "parameters": false,
+          "requestBody": false,
+          "operationId": false,
+          "tags": false
+        },
+        "bleu": 0.16171348972735183,
+        "time_seconds": 4.31
+      },
+      "swaggerlm": {
+        "raw_output": "{\n  \"description\": \"This webhook will be invoked whenever an attempted delivery query has been resolved.\",\n  \"requestBody\": {\n    \"required\": true,\n    \"content\": {\n      \"application/json\": {\n        \"schema\": {\n          \"type\": \"object\"\n        }\n      }\n    }\n  },\n  \"responses\": {\n    \"204\": {\n      \"description\": \"No Content\"\n    }\n  },\n  \"path\": \"/attempted-delivery-query-resolved\",\n  \"method\": \"put\"\n}",
+        "json_valid": true,
+        "openapi_valid": true,
+        "fields": {
+          "summary": false,
+          "responses": true,
+          "description": true,
+          "parameters": false,
+          "requestBody": true,
+          "operationId": false,
+          "tags": false
+        },
+        "bleu": 0.0998808417581848,
+        "time_seconds": 2.05
+      }
+    },
+    {
+      "qwen2.5-coder:3b": {
+        "raw_output": "```json\n{\n  \"openapi\": \"3.0.1\",\n  \"info\": {\n    \"title\": \"User API\",\n    \"version\": \"1.0.0\"\n  },\n  \"paths\": {\n    \"/users/{id}/edit-info\": {\n      \"put\": {\n        \"summary\": \"Replaces the User resource.\",\n        \"description\": \"\",\n        \"parameters\": [\n          {\n            \"name\": \"id\",\n            \"in\": \"path\",\n            \"required\": true,\n            \"schema\": {\n              \"type\": \"string\"\n            }\n          },\n          {\n            \"name\": \"db\",\n            \"in\": \"header\",\n ",
+        "json_valid": true,
+        "openapi_valid": false,
+        "fields": {
+          "summary": false,
+          "responses": false,
+          "description": false,
+          "parameters": false,
+          "requestBody": false,
+          "operationId": false,
+          "tags": false
+        },
+        "bleu": 0.05355693630932375,
+        "time_seconds": 5.55
+      },
+      "swaggerlm": {
+        "raw_output": "{\n  \"description\": \"Replaces the User resource.\",\n  \"operationId\": \"edit_info-user\",\n  \"tags\": [\n    \"users\"\n  ],\n  \"parameters\": [\n    {\n      \"name\": \"id\",\n      \"in\": \"path\",\n      \"required\": true,\n      \"schema\": {\n        \"type\": \"string\"\n      }\n    },\n    {\n      \"name\": \"Authorization\",\n      \"in\": \"header\",\n      \"required\": false,\n      \"description\": \"The authorization token for the request.\",\n      \"schema\": {\n        \"type\": \"string\"\n      }\n    }\n  ],\n  \"responses\": {\n    \"204\": {",
+        "json_valid": true,
+        "openapi_valid": true,
+        "fields": {
+          "summary": false,
+          "responses": true,
+          "description": true,
+          "parameters": true,
+          "requestBody": false,
+          "operationId": true,
+          "tags": true
+        },
+        "bleu": 0.06643649151819767,
+        "time_seconds": 3.45
+      }
+    },
+    {
+      "qwen2.5-coder:3b": {
+        "raw_output": "```json\n{\n  \"openapi\": \"3.0.1\",\n  \"info\": {\n    \"title\": \"API Documentation\",\n    \"version\": \"1.0.0\"\n  },\n  \"paths\": {\n    \"/api/Status\": {\n      \"get\": {\n        \"summary\": \"Get the current status of message\",\n        \"description\": \"\",\n        \"parameters\": [\n          {\n            \"name\": \"messageId\",\n            \"in\": \"query\",\n            \"required\": false,\n            \"schema\": {\n              \"type\": \"string\"\n            }\n          }\n        ],\n        \"responses\": {\n          \"200\": {\n ",
+        "json_valid": false,
+        "openapi_valid": false,
+        "fields": {
+          "summary": false,
+          "responses": false,
+          "description": false,
+          "parameters": false,
+          "requestBody": false,
+          "operationId": false,
+          "tags": false
+        },
+        "bleu": 0.4019082579875778,
+        "time_seconds": 4.81
+      },
+      "swaggerlm": {
+        "raw_output": "{\n  \"description\": \"Get the current status of message\",\n  \"parameters\": [\n    {\n      \"name\": \"messageId\",\n      \"in\": \"query\",\n      \"required\": false,\n      \"schema\": {\n        \"type\": \"string\"\n      }\n    }\n  ],\n  \"responses\": {\n    \"200\": {\n      \"description\": \"OK\",\n      \"content\": {\n        \"application/json\": {\n          \"schema\": {\n            \"type\": \"object\"\n          }\n        }\n      }\n    },\n    \"401\": {\n      \"description\": \"Unauthorized\"\n    }\n  },\n  \"path\": \"/api/Status\",\n  \"met",
+        "json_valid": true,
+        "openapi_valid": true,
+        "fields": {
+          "summary": false,
+          "responses": true,
+          "description": true,
+          "parameters": true,
+          "requestBody": false,
+          "operationId": false,
+          "tags": false
+        },
+        "bleu": 0.03254298623496327,
+        "time_seconds": 2.66
+      }
+    },
+    {
+      "qwen2.5-coder:3b": {
+        "raw_output": "```json\n{\n  \"openapi\": \"3.0.1\",\n  \"info\": {\n    \"title\": \"API Documentation\",\n    \"version\": \"1.0.0\"\n  },\n  \"paths\": {\n    \"/admin/health\": {\n      \"get\": {\n        \"summary\": \"Dashboard 健康检查端点\",\n        \"description\": \"This endpoint checks the health of the dashboard.\",\n        \"operationId\": \"admin_health\",\n        \"parameters\": [\n          {\n            \"name\": \"authenticated\",\n            \"in\": \"query\",\n            \"required\": true,\n            \"schema\": {\n              \"type\": \"boolean\"\n   ",
+        "json_valid": true,
+        "openapi_valid": false,
+        "fields": {
+          "summary": false,
+          "responses": false,
+          "description": false,
+          "parameters": false,
+          "requestBody": false,
+          "operationId": false,
+          "tags": false
+        },
+        "bleu": 0.02246023496210995,
+        "time_seconds": 5.94
+      },
+      "swaggerlm": {
+        "raw_output": "{\n  \"path\": \"/admin/health\",\n  \"method\": \"get\",\n  \"operation\": {\n    \"summary\": \"Dashboard 健康检查端点\",\n    \"operationId\": \"admin_health\",\n    \"parameters\": [\n      {\n        \"name\": \"authenticated\",\n        \"in\": \"query\",\n        \"required\": false,\n        \"schema\": {\n          \"type\": \"boolean\"\n        }\n      }\n    ],\n    \"responses\": {\n      \"200\": {\n        \"description\": \"Successful response\",\n        \"content\": {\n          \"application/json\": {\n            \"schema\": {\n              \"type\": \"o",
+        "json_valid": true,
+        "openapi_valid": true,
+        "fields": {
+          "summary": true,
+          "responses": true,
+          "description": false,
+          "parameters": true,
+          "requestBody": false,
+          "operationId": true,
+          "tags": true
+        },
+        "bleu": 0.022028254648951306,
+        "time_seconds": 3.28
+      }
+    },
+    {
+      "qwen2.5-coder:3b": {
+        "raw_output": "```json\n{\n  \"openapi\": \"3.0.1\",\n  \"info\": {\n    \"title\": \"API Documentation\",\n    \"version\": \"1.0.0\"\n  },\n  \"paths\": {\n    \"/categories/{category}/channel/{channel}/4od/popular.atom\": {\n      \"get\": {\n        \"summary\": \"Lists all Channel 4oD most popular brands for the given category within the last 7 days, in order of popularity\",\n        \"description\": \"This endpoint retrieves a list of the most popular brands on Channel 4oD for a specified category within the last 7 days. The response is for",
+        "json_valid": true,
+        "openapi_valid": false,
+        "fields": {
+          "summary": false,
+          "responses": false,
+          "description": false,
+          "parameters": false,
+          "requestBody": false,
+          "operationId": false,
+          "tags": false
+        },
+        "bleu": 0.13752373446311714,
+        "time_seconds": 5.8
+      },
+      "swaggerlm": {
+        "raw_output": "{\n  \"description\": \"Lists all Channel 4oD most popular brands for the given category within the last 7 days, in order of popularity.\",\n  \"operationId\": \"most_popular_brands_feed_3\",\n  \"responses\": {\n    \"200\": {\n      \"description\": \"OK\"\n    }\n  },\n  \"path\": \"/categories/{category}/channel/{channel}/4od/popular.atom\",\n  \"method\": \"get\"\n}",
+        "json_valid": true,
+        "openapi_valid": true,
+        "fields": {
+          "summary": false,
+          "responses": true,
+          "description": true,
+          "parameters": false,
+          "requestBody": false,
+          "operationId": true,
+          "tags": false
+        },
+        "bleu": 0.27201888591745094,
+        "time_seconds": 1.94
+      }
+    },
+    {
+      "qwen2.5-coder:3b": {
+        "raw_output": "```json\n{\n  \"openapi\": \"3.0.1\",\n  \"info\": {\n    \"title\": \"Weather API\",\n    \"version\": \"1.0.0\"\n  },\n  \"paths\": {\n    \"/public/history\": {\n      \"get\": {\n        \"summary\": \"Abfrage der Wettervorhersage für einen Ort\",\n        \"description\": \"Diese Route ermöglicht die Abfrage der Wettervorhersage für einen Ort, der entweder durch Angabe eines Suchbegriffs mit dem Parameter `q` oder durch Geo-Koordinaten in den Parametern `lat` und `lon` spezifiziert wird.\",\n        \"parameters\": [\n          {\n  ",
+        "json_valid": false,
+        "openapi_valid": false,
+        "fields": {
+          "summary": false,
+          "responses": false,
+          "description": false,
+          "parameters": false,
+          "requestBody": false,
+          "operationId": false,
+          "tags": false
+        },
+        "bleu": 0.35195034842720163,
+        "time_seconds": 8.84
+      },
+      "swaggerlm": {
+        "raw_output": "{\n  \"description\": \"Abfrage der Wettervorhersage für einen Ort, der entweder durch Angabe eines Suchbegriffs mit dem Parameter `q` oder durch Geo-Koordinaten in den Parametern `lat` und `lon` spezifiziert wird.\",\n  \"parameters\": [\n    {\n      \"name\": \"q\",\n      \"in\": \"query\",\n      \"required\": false,\n      \"description\": \"Suchbegriff\"\n    },\n    {\n      \"name\": \"from\",\n      \"in\": \"query\",\n      \"required\": false,\n      \"description\": \"Datum und Zeit der Vorhersage in ISO 8601 Format (z.B. `2023",
+        "json_valid": true,
+        "openapi_valid": true,
+        "fields": {
+          "summary": false,
+          "responses": true,
+          "description": true,
+          "parameters": true,
+          "requestBody": false,
+          "operationId": false,
+          "tags": false
+        },
+        "bleu": 0.21021032369389675,
+        "time_seconds": 5.41
+      }
+    },
+    {
+      "qwen2.5-coder:3b": {
+        "raw_output": "```json\n{\n  \"openapi\": \"3.0.1\",\n  \"info\": {\n    \"title\": \"API Documentation\",\n    \"version\": \"1.0.0\"\n  },\n  \"paths\": {\n    \"/dfr_rest_services.get_sdwis_compliance\": {\n      \"get\": {\n        \"summary\": \"This procedure obtains data for the SDWA Compliance section of the DFR\",\n        \"description\": \"\",\n        \"parameters\": [\n          {\n            \"name\": \"param\",\n            \"in\": \"query\",\n            \"required\": false,\n            \"schema\": {\n              \"type\": \"string\"\n            }\n     ",
+        "json_valid": false,
+        "openapi_valid": false,
+        "fields": {
+          "summary": false,
+          "responses": false,
+          "description": false,
+          "parameters": false,
+          "requestBody": false,
+          "operationId": false,
+          "tags": false
+        },
+        "bleu": 0.11096559835722465,
+        "time_seconds": 7.67
+      },
+      "swaggerlm": {
+        "raw_output": "{\n  \"description\": \"This procedure obtains data for the SDWA Compliance section of the DFR. The results are returned in a table format with columns that include:\\n\\n* `SiteID` - Site ID number.\\n* `SiteName` - Site name.\\n* `County` - County name.\\n* `State` - State code.\\n* `ComplianceStatus` - Compliance status (e.g., \\\"Compliant\\\", \\\"Non-Compliant\\\").\\n* `ComplianceDate` - Date of compliance or non-compliance.\\n\\nThe results are filtered by the following parameters:\\n\\n* `SiteID` - Site ID nu",
+        "json_valid": true,
+        "openapi_valid": true,
+        "fields": {
+          "summary": false,
+          "responses": true,
+          "description": true,
+          "parameters": true,
+          "requestBody": false,
+          "operationId": true,
+          "tags": true
+        },
+        "bleu": 0.09519306455604334,
+        "time_seconds": 5.69
+      }
+    },
+    {
+      "qwen2.5-coder:3b": {
+        "raw_output": "```json\n{\n  \"openapi\": \"3.0.2\",\n  \"info\": {\n    \"title\": \"API Documentation\",\n    \"version\": \"1.0.0\"\n  },\n  \"paths\": {\n    \"/quote/list\": {\n      \"get\": {\n        \"summary\": \"Get the list of quotes in your private collection\",\n        \"description\": \"Retrieve a list of quotes from the database with pagination support.\",\n        \"parameters\": [\n          {\n            \"name\": \"start\",\n            \"in\": \"query\",\n            \"description\": \"The starting index for pagination (default is 0).\",\n      ",
+        "json_valid": true,
+        "openapi_valid": false,
+        "fields": {
+          "summary": false,
+          "responses": false,
+          "description": false,
+          "parameters": false,
+          "requestBody": false,
+          "operationId": false,
+          "tags": false
+        },
+        "bleu": 0.0874857475558217,
+        "time_seconds": 6.87
+      },
+      "swaggerlm": {
+        "raw_output": "{\n  \"summary\": \"Get the list of quotes in your private collection\",\n  \"operationId\": \"get_quote_list\",\n  \"tags\": [\n    \"quote\"\n  ],\n  \"parameters\": [\n    {\n      \"name\": \"start\",\n      \"in\": \"query\",\n      \"required\": false,\n      \"description\": \"The number of items to skip before starting to collect the result set.\",\n      \"schema\": {\n        \"type\": \"integer\",\n        \"format\": \"int32\"\n      }\n    },\n    {\n      \"name\": \"limit\",\n      \"in\": \"query\",\n      \"required\": false,\n      \"description\"",
+        "json_valid": true,
+        "openapi_valid": true,
+        "fields": {
+          "summary": true,
+          "responses": true,
+          "description": false,
+          "parameters": true,
+          "requestBody": false,
+          "operationId": true,
+          "tags": true
+        },
+        "bleu": 0.0774461220883704,
+        "time_seconds": 4.96
+      }
+    },
+    {
+      "qwen2.5-coder:3b": {
+        "raw_output": "```json\n{\n  \"openapi\": \"3.0.1\",\n  \"info\": {\n    \"title\": \"API Documentation\",\n    \"version\": \"1.0.0\"\n  },\n  \"paths\": {\n    \"/{blockchain}/v2/balancehistory/{addressOrXpub}\": {\n      \"get\": {\n        \"summary\": \"Returns a balance history for the specified XPUB or address\",\n        \"description\": \"The value of sentToSelf is the amount sent from the same address to the same address or within addresses of xpub\",\n        \"parameters\": [\n          {\n            \"name\": \"blockchain\",\n            \"in\": ",
+        "json_valid": false,
+        "openapi_valid": false,
+        "fields": {
+          "summary": false,
+          "responses": false,
+          "description": false,
+          "parameters": false,
+          "requestBody": false,
+          "operationId": false,
+          "tags": false
+        },
+        "bleu": 0.2364633781866649,
+        "time_seconds": 8.94
+      },
+      "swaggerlm": {
+        "raw_output": "{\n  \"summary\": \"Returns a balance history for the specified XPUB or address\",\n  \"description\": \"The value of sentToSelf is the amount sent from the same address to the same address or within addresses of xpub\",\n  \"operationId\": \"getBalanceHistoryV2\",\n  \"tags\": [\n    \"balancehistory\"\n  ],\n  \"parameters\": [\n    {\n      \"name\": \"param\",\n      \"in\": \"query\",\n      \"required\": false\n    },\n    {\n      \"name\": \"param\",\n      \"in\": \"query\",\n      \"required\": false\n    },\n    {\n      \"name\": \"param\",\n  ",
+        "json_valid": true,
+        "openapi_valid": true,
+        "fields": {
+          "summary": true,
+          "responses": true,
+          "description": true,
+          "parameters": true,
+          "requestBody": false,
+          "operationId": true,
+          "tags": true
+        },
+        "bleu": 0.3999937756878644,
+        "time_seconds": 4.12
+      }
+    },
+    {
+      "qwen2.5-coder:3b": {
+        "raw_output": "```json\n{\n  \"openapi\": \"3.0.3\",\n  \"info\": {\n    \"title\": \"API Documentation\",\n    \"version\": \"1.0.0\"\n  },\n  \"paths\": {\n    \"/hw2/leaders\": {\n      \"get\": {\n        \"summary\": \"Get Halo Wars 2 Leaders\",\n        \"description\": \"Retrieves all leaders from the database.\",\n        \"parameters\": [\n          {\n            \"name\": \"startAt\",\n            \"in\": \"query\",\n            \"required\": false,\n            \"schema\": {\n              \"type\": \"string\"\n            },\n            \"description\": \"Optional",
+        "json_valid": false,
+        "openapi_valid": false,
+        "fields": {
+          "summary": false,
+          "responses": false,
+          "description": false,
+          "parameters": false,
+          "requestBody": false,
+          "operationId": false,
+          "tags": false
+        },
+        "bleu": 0.11950746015645056,
+        "time_seconds": 6.48
+      },
+      "swaggerlm": {
+        "raw_output": "{\n  \"summary\": \"Changelog\\nFebruary 21, 2017:\\nAdded Endpoint\",\n  \"operationId\": \"halo_wars_2_leaders\",\n  \"tags\": [\n    \"hw2\"\n  ],\n  \"parameters\": [\n    {\n      \"name\": \"startAt\",\n      \"in\": \"query\",\n      \"required\": false,\n      \"description\": \"The number of results to skip before returning the next set.\"\n    }\n  ],\n  \"responses\": {\n    \"200\": {\n      \"description\": \"OK\"\n    },\n    \"401\": {\n      \"description\": \"Unauthorized\"\n    }\n  },\n  \"path\": \"/hw2/leaders\",\n  \"method\": \"get\"\n}",
+        "json_valid": true,
+        "openapi_valid": true,
+        "fields": {
+          "summary": true,
+          "responses": true,
+          "description": false,
+          "parameters": true,
+          "requestBody": false,
+          "operationId": true,
+          "tags": true
+        },
+        "bleu": 0.003426116574799521,
+        "time_seconds": 3.04
+      }
+    },
+    {
+      "qwen2.5-coder:3b": {
+        "raw_output": "```json\n{\n  \"openapi\": \"3.0.1\",\n  \"info\": {\n    \"title\": \"API Documentation\",\n    \"version\": \"1.0.0\"\n  },\n  \"paths\": {\n    \"/users/report_spam.json\": {\n      \"post\": {\n        \"summary\": \"Report a user as spam\",\n        \"description\": \"The user specified in the id is blocked by the authenticated user and reported as a spammer.\",\n        \"parameters\": [\n          {\n            \"name\": \"id\",\n            \"in\": \"path\",\n            \"required\": true,\n            \"schema\": {\n              \"type\": \"stri",
+        "json_valid": true,
+        "openapi_valid": false,
+        "fields": {
+          "summary": false,
+          "responses": false,
+          "description": false,
+          "parameters": false,
+          "requestBody": false,
+          "operationId": false,
+          "tags": false
+        },
+        "bleu": 0.12740788018829452,
+        "time_seconds": 8.25
+      },
+      "swaggerlm": {
+        "raw_output": "{\n  \"description\": \"The user specified in the `id` is blocked by the authenticated user and reported as a spammer.\",\n  \"requestBody\": {\n    \"required\": true,\n    \"content\": {\n      \"application/json\": {\n        \"schema\": {\n          \"type\": \"object\"\n        }\n      }\n    }\n  },\n  \"responses\": {\n    \"200\": {\n      \"description\": \"OK\",\n      \"content\": {\n        \"application/json\": {\n          \"schema\": {\n            \"type\": \"object\"\n          }\n        }\n      }\n    }\n  },\n  \"path\": \"/users/repor",
+        "json_valid": true,
+        "openapi_valid": true,
+        "fields": {
+          "summary": false,
+          "responses": true,
+          "description": true,
+          "parameters": false,
+          "requestBody": true,
+          "operationId": false,
+          "tags": false
+        },
+        "bleu": 0.3168900267453786,
+        "time_seconds": 2.73
+      }
+    },
+    {
+      "qwen2.5-coder:3b": {
+        "raw_output": "```json\n{\n  \"openapi\": \"3.0.1\",\n  \"info\": {\n    \"title\": \"API Documentation\",\n    \"version\": \"1.0.0\"\n  },\n  \"paths\": {\n    \"/sendClientsMessage\": {\n      \"get\": {\n        \"summary\": \"sends a custom message of type msg to the pad\",\n        \"description\": \"This endpoint sends a custom message to the specified pad using the provided parameters.\",\n        \"parameters\": [\n          {\n            \"name\": \"padID\",\n            \"in\": \"query\",\n            \"required\": false,\n            \"schema\": {\n       ",
+        "json_valid": false,
+        "openapi_valid": false,
+        "fields": {
+          "summary": false,
+          "responses": false,
+          "description": false,
+          "parameters": false,
+          "requestBody": false,
+          "operationId": false,
+          "tags": false
+        },
+        "bleu": 0.3315362655457071,
+        "time_seconds": 7.79
+      },
+      "swaggerlm": {
+        "raw_output": "{\n  \"summary\": \"sends a custom message of type msg to the pad\",\n  \"operationId\": \"sendClientsMessageUsingGET\",\n  \"parameters\": [\n    {\n      \"name\": \"padID\",\n      \"in\": \"query\",\n      \"required\": false,\n      \"description\": \"the id of the pad\",\n      \"schema\": {\n        \"type\": \"string\"\n      }\n    },\n    {\n      \"name\": \"msg\",\n      \"in\": \"query\",\n      \"required\": false,\n      \"description\": \"the message to send\",\n      \"schema\": {\n        \"type\": \"string\"\n      }\n    }\n  ],\n  \"responses\": {\n",
+        "json_valid": true,
+        "openapi_valid": true,
+        "fields": {
+          "summary": true,
+          "responses": true,
+          "description": false,
+          "parameters": true,
+          "requestBody": false,
+          "operationId": true,
+          "tags": false
+        },
+        "bleu": 0.07771109247077447,
+        "time_seconds": 3.98
+      }
+    },
+    {
+      "qwen2.5-coder:3b": {
+        "raw_output": "```json\n{\n  \"openapi\": \"3.0.2\",\n  \"info\": {\n    \"title\": \"API Documentation\",\n    \"version\": \"1.0.0\"\n  },\n  \"paths\": {\n    \"/v1/data-store/devices\": {\n      \"get\": {\n        \"summary\": \"List devices available in the data store\",\n        \"description\": \"Retrieves a list of all devices stored in the data store.\",\n        \"responses\": {\n          \"200\": {\n            \"description\": \"A list of device objects\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n ",
+        "json_valid": true,
+        "openapi_valid": false,
+        "fields": {
+          "summary": false,
+          "responses": false,
+          "description": false,
+          "parameters": false,
+          "requestBody": false,
+          "operationId": false,
+          "tags": false
+        },
+        "bleu": 0.06141477122707083,
+        "time_seconds": 5.86
+      },
+      "swaggerlm": {
+        "raw_output": "{\n  \"description\": \"List devices available in the data store\",\n  \"operationId\": \"listDevices\",\n  \"responses\": {\n    \"200\": {\n      \"description\": \"Successful response\"\n    }\n  },\n  \"path\": \"/v1/data-store/devices\",\n  \"method\": \"get\"\n}",
+        "json_valid": true,
+        "openapi_valid": true,
+        "fields": {
+          "summary": false,
+          "responses": true,
+          "description": true,
+          "parameters": false,
+          "requestBody": false,
+          "operationId": true,
+          "tags": false
+        },
+        "bleu": 0.11295472430759666,
+        "time_seconds": 1.32
+      }
+    },
+    {
+      "qwen2.5-coder:3b": {
+        "raw_output": "```json\n{\n  \"openapi\": \"3.0.1\",\n  \"info\": {\n    \"title\": \"Jurisdiction API\",\n    \"version\": \"1.0.0\"\n  },\n  \"paths\": {\n    \"/jurisdictions\": {\n      \"get\": {\n        \"summary\": \"Get list of supported Jurisdictions\",\n        \"description\": \"Retrieve a list of jurisdictions, which are states or municipalities.\",\n        \"parameters\": [\n          {\n            \"name\": \"classification\",\n            \"in\": \"query\",\n            \"required\": false,\n            \"schema\": {\n              \"type\": \"string\"\n  ",
+        "json_valid": false,
+        "openapi_valid": false,
+        "fields": {
+          "summary": false,
+          "responses": false,
+          "description": false,
+          "parameters": false,
+          "requestBody": false,
+          "operationId": false,
+          "tags": false
+        },
+        "bleu": 0.439334857580958,
+        "time_seconds": 8.93
+      },
+      "swaggerlm": {
+        "raw_output": "{\n  \"description\": \"Get list of supported Jurisdictions, a Jurisdiction is a state or municipality.\",\n  \"parameters\": [\n    {\n      \"name\": \"classification\",\n      \"in\": \"query\",\n      \"required\": false,\n      \"schema\": {\n        \"type\": \"string\"\n      }\n    },\n    {\n      \"name\": \"include\",\n      \"in\": \"query\",\n      \"required\": false,\n      \"description\": \"List of fields to include in the response. If not specified, all fields are returned.\",\n      \"schema\": {\n        \"type\": \"array\",\n        ",
+        "json_valid": true,
+        "openapi_valid": true,
+        "fields": {
+          "summary": false,
+          "responses": true,
+          "description": true,
+          "parameters": true,
+          "requestBody": false,
+          "operationId": false,
+          "tags": false
+        },
+        "bleu": 0.10891494090919845,
+        "time_seconds": 6.22
+      }
+    },
+    {
+      "qwen2.5-coder:3b": {
+        "raw_output": "```json\n{\n  \"openapi\": \"3.0.1\",\n  \"info\": {\n    \"title\": \"API Documentation\",\n    \"version\": \"1.0.0\"\n  },\n  \"paths\": {\n    \"/ips/{id}\": {\n      \"put\": {\n        \"summary\": \"Update an ip address object\",\n        \"description\": \"\",\n        \"parameters\": [\n          {\n            \"name\": \"id\",\n            \"in\": \"path\",\n            \"required\": true,\n            \"schema\": {\n              \"type\": \"string\"\n            }\n          },\n          {\n            \"name\": \"body\",\n            \"in\": \"body\",\n    ",
+        "json_valid": true,
+        "openapi_valid": false,
+        "fields": {
+          "summary": false,
+          "responses": false,
+          "description": false,
+          "parameters": false,
+          "requestBody": false,
+          "operationId": false,
+          "tags": false
+        },
+        "bleu": 0.013437458696808756,
+        "time_seconds": 4.33
+      },
+      "swaggerlm": {
+        "raw_output": "{\n  \"description\": \"Update an ip address object\",\n  \"parameters\": [\n    {\n      \"name\": \"id\",\n      \"in\": \"path\",\n      \"required\": true,\n      \"schema\": {\n        \"type\": \"string\"\n      }\n    }\n  ],\n  \"requestBody\": {\n    \"required\": true,\n    \"content\": {\n      \"application/json\": {\n        \"schema\": {\n          \"type\": \"object\"\n        }\n      }\n    }\n  },\n  \"responses\": {\n    \"200\": {\n      \"description\": \"Successful response\",\n      \"content\": {\n        \"application/json\": {\n          \"sche",
+        "json_valid": true,
+        "openapi_valid": true,
+        "fields": {
+          "summary": false,
+          "responses": true,
+          "description": true,
+          "parameters": true,
+          "requestBody": true,
+          "operationId": false,
+          "tags": false
+        },
+        "bleu": 0.006538989506092058,
+        "time_seconds": 3.59
+      }
+    },
+    {
+      "qwen2.5-coder:3b": {
+        "raw_output": "```json\n{\n  \"openapi\": \"3.0.1\",\n  \"info\": {\n    \"title\": \"Firewall API\",\n    \"version\": \"1.0.0\"\n  },\n  \"paths\": {\n    \"/firewalls\": {\n      \"get\": {\n        \"summary\": \"Returns all Firewall objects\",\n        \"description\": \"Retrieves a list of all Firewall objects from the database.\",\n        \"parameters\": [\n          {\n            \"name\": \"sort\",\n            \"in\": \"query\",\n            \"required\": false,\n            \"schema\": {\n              \"type\": \"string\"\n            },\n            \"descripti",
+        "json_valid": true,
+        "openapi_valid": false,
+        "fields": {
+          "summary": false,
+          "responses": false,
+          "description": false,
+          "parameters": false,
+          "requestBody": false,
+          "operationId": false,
+          "tags": false
+        },
+        "bleu": 0.017914871309134144,
+        "time_seconds": 8.3
+      },
+      "swaggerlm": {
+        "raw_output": "{\n  \"summary\": \"Returns all Firewall objects\",\n  \"operationId\": \"get_firewalls\",\n  \"tags\": [\n    \"Firewall\"\n  ],\n  \"parameters\": [\n    {\n      \"name\": \"sort\",\n      \"in\": \"query\",\n      \"required\": false,\n      \"description\": \"Sort order for the results. The default is `created_at`.\",\n      \"schema\": {\n        \"type\": \"string\",\n        \"enum\": [\n          \"created_at\",\n          \"updated_at\"\n        ]\n      }\n    },\n    {\n      \"name\": \"name\",\n      \"in\": \"query\",\n      \"required\": false,\n      ",
+        "json_valid": true,
+        "openapi_valid": true,
+        "fields": {
+          "summary": true,
+          "responses": true,
+          "description": false,
+          "parameters": true,
+          "requestBody": false,
+          "operationId": true,
+          "tags": true
+        },
+        "bleu": 0.015492233728884718,
+        "time_seconds": 7.31
+      }
+    },
+    {
+      "qwen2.5-coder:3b": {
+        "raw_output": "```json\n{\n  \"openapi\": \"3.0.1\",\n  \"info\": {\n    \"title\": \"API Documentation\",\n    \"version\": \"1.0.0\"\n  },\n  \"paths\": {\n    \"/models/{model}\": {\n      \"get\": {\n        \"summary\": \"Retrieves a model instance, providing basic information about the model such as the owner and permissioning.\",\n        \"description\": \"This endpoint retrieves all models from the database.\",\n        \"parameters\": [\n          {\n            \"name\": \"model\",\n            \"in\": \"path\",\n            \"required\": true,\n         ",
+        "json_valid": true,
+        "openapi_valid": false,
+        "fields": {
+          "summary": false,
+          "responses": false,
+          "description": false,
+          "parameters": false,
+          "requestBody": false,
+          "operationId": false,
+          "tags": false
+        },
+        "bleu": 0.2096714226622784,
+        "time_seconds": 9.32
+      },
+      "swaggerlm": {
+        "raw_output": "{\n  \"description\": \"Retrieves a model instance, providing basic information about the model such as the owner and permissioning.\",\n  \"parameters\": [\n    {\n      \"name\": \"model\",\n      \"in\": \"path\",\n      \"required\": true,\n      \"schema\": {\n        \"type\": \"string\"\n      }\n    }\n  ],\n  \"responses\": {\n    \"200\": {\n      \"description\": \"Successful response\",\n      \"content\": {\n        \"application/json\": {\n          \"schema\": {\n            \"type\": \"object\"\n          }\n        }\n      }\n    },\n    \"",
+        "json_valid": true,
+        "openapi_valid": true,
+        "fields": {
+          "summary": false,
+          "responses": true,
+          "description": true,
+          "parameters": true,
+          "requestBody": false,
+          "operationId": false,
+          "tags": false
+        },
+        "bleu": 0.18064665660323606,
+        "time_seconds": 3.87
+      }
+    },
+    {
+      "qwen2.5-coder:3b": {
+        "raw_output": "```json\n{\n  \"openapi\": \"3.0.1\",\n  \"info\": {\n    \"title\": \"API Documentation\",\n    \"version\": \"1.0.0\"\n  },\n  \"paths\": {\n    \"/setup/flow/\": {\n      \"get\": {\n        \"summary\": \"Returns a list of flows you've previously created\",\n        \"description\": \"This endpoint returns all the flow objects stored in the database.\",\n        \"responses\": {\n          \"200\": {\n            \"description\": \"A list of Flow objects\",\n            \"content\": {\n              \"application/json\": {\n                \"schema",
+        "json_valid": true,
+        "openapi_valid": false,
+        "fields": {
+          "summary": false,
+          "responses": false,
+          "description": false,
+          "parameters": false,
+          "requestBody": false,
+          "operationId": false,
+          "tags": false
+        },
+        "bleu": 0.09316743032012509,
+        "time_seconds": 8.09
+      },
+      "swaggerlm": {
+        "raw_output": "{\n  \"description\": \"Returns a list of flows you've previously created.\",\n  \"operationId\": \"get_setup_flow\",\n  \"responses\": {\n    \"200\": {\n      \"description\": \"Successful response\"\n    }\n  },\n  \"path\": \"/setup/flow/\",\n  \"method\": \"get\"\n}",
+        "json_valid": true,
+        "openapi_valid": true,
+        "fields": {
+          "summary": false,
+          "responses": true,
+          "description": true,
+          "parameters": false,
+          "requestBody": false,
+          "operationId": true,
+          "tags": false
+        },
+        "bleu": 0.05546916038058183,
+        "time_seconds": 1.52
+      }
+    },
+    {
+      "qwen2.5-coder:3b": {
+        "raw_output": "```json\n{\n  \"openapi\": \"3.0.1\",\n  \"info\": {\n    \"title\": \"Example API\",\n    \"version\": \"1.0.0\"\n  },\n  \"paths\": {\n    \"/items\": {\n      \"get\": {\n        \"summary\": \"Read items\",\n        \"description\": \"Retrieve a list of items based on common parameters.\",\n        \"parameters\": [\n          {\n            \"name\": \"commons\",\n            \"in\": \"query\",\n            \"required\": true,\n            \"schema\": {\n              \"$ref\": \"#/components/schemas/CommonParameters\"\n            }\n          }\n        ",
+        "json_valid": false,
+        "openapi_valid": false,
+        "fields": {
+          "summary": false,
+          "responses": false,
+          "description": false,
+          "parameters": false,
+          "requestBody": false,
+          "operationId": false,
+          "tags": false
+        },
+        "bleu": 0.18102529262044367,
+        "time_seconds": 5.51
+      },
+      "swaggerlm": {
+        "raw_output": "{\n  \"path\": \"/items/\",\n  \"method\": \"get\",\n  \"operation\": {\n    \"summary\": \"Read Items\",\n    \"operationId\": \"read_items\",\n    \"parameters\": [\n      {\n        \"name\": \"commons\",\n        \"in\": \"query\",\n        \"required\": false,\n        \"schema\": {\n          \"type\": \"object\"\n        }\n      }\n    ],\n    \"responses\": {\n      \"200\": {\n        \"description\": \"Successful response\",\n        \"content\": {\n          \"application/json\": {\n            \"schema\": {\n              \"type\": \"object\"\n            }\n",
+        "json_valid": true,
+        "openapi_valid": true,
+        "fields": {
+          "summary": true,
+          "responses": true,
+          "description": false,
+          "parameters": true,
+          "requestBody": false,
+          "operationId": true,
+          "tags": true
+        },
+        "bleu": 0.030949816157880672,
+        "time_seconds": 3.52
+      }
+    },
+    {
+      "qwen2.5-coder:3b": {
+        "raw_output": "```json\n{\n  \"openapi\": \"3.0.1\",\n  \"info\": {\n    \"title\": \"API Documentation\",\n    \"version\": \"1.0.0\"\n  },\n  \"paths\": {\n    \"/provider-defaults\": {\n      \"get\": {\n        \"summary\": \"Get default configuration for all provider types.\",\n        \"description\": \"Retrieves the default configuration settings for all available LLM providers.\",\n        \"operationId\": \"getProviderDefaults\",\n        \"responses\": {\n          \"200\": {\n            \"description\": \"Successful response with a dictionary of provi",
+        "json_valid": false,
+        "openapi_valid": false,
+        "fields": {
+          "summary": false,
+          "responses": false,
+          "description": false,
+          "parameters": false,
+          "requestBody": false,
+          "operationId": false,
+          "tags": false
+        },
+        "bleu": 0.13447258166433576,
+        "time_seconds": 6.76
+      },
+      "swaggerlm": {
+        "raw_output": "{\n  \"path\": \"/provider-defaults\",\n  \"method\": \"get\",\n  \"operation\": {\n    \"summary\": \"Get Provider Defaults\",\n    \"operationId\": \"get_provider_defaults\",\n    \"parameters\": [],\n    \"responses\": {\n      \"200\": {\n        \"description\": \"Successful response\",\n        \"content\": {\n          \"application/json\": {\n            \"schema\": {\n              \"type\": \"object\"\n            }\n          }\n        }\n      },\n      \"422\": {\n        \"description\": \"Validation Error\"\n      }\n    },\n    \"tags\": [\n     ",
+        "json_valid": true,
+        "openapi_valid": true,
+        "fields": {
+          "summary": true,
+          "responses": true,
+          "description": false,
+          "parameters": true,
+          "requestBody": false,
+          "operationId": true,
+          "tags": true
+        },
+        "bleu": 0.03152192431318167,
+        "time_seconds": 2.82
+      }
+    },
+    {
+      "qwen2.5-coder:3b": {
+        "raw_output": "```json\n{\n  \"openapi\": \"3.0.1\",\n  \"info\": {\n    \"title\": \"API Documentation\",\n    \"version\": \"1.0.0\"\n  },\n  \"paths\": {\n    \"/v1/stats/auto-hashtag\": {\n      \"get\": {\n        \"summary\": \"Returns auto-hashtagged text of the post\",\n        \"description\": \"This endpoint returns auto-hashtagged text based on the provided post content and optional parameters.\",\n        \"parameters\": [\n          {\n            \"name\": \"post\",\n            \"in\": \"query\",\n            \"required\": true,\n            \"schema\":",
+        "json_valid": false,
+        "openapi_valid": false,
+        "fields": {
+          "summary": false,
+          "responses": false,
+          "description": false,
+          "parameters": false,
+          "requestBody": false,
+          "operationId": false,
+          "tags": false
+        },
+        "bleu": 0.27471445486831575,
+        "time_seconds": 10.3
+      },
+      "swaggerlm": {
+        "raw_output": "{\n  \"description\": \"Returns auto-hashtagged text of the post\",\n  \"parameters\": [\n    {\n      \"name\": \"post\",\n      \"in\": \"query\",\n      \"required\": true,\n      \"schema\": {\n        \"type\": \"string\"\n      }\n    },\n    {\n      \"name\": \"maxHashtags\",\n      \"in\": \"query\",\n      \"required\": false,\n      \"schema\": {\n        \"type\": \"integer\",\n        \"default\": 2\n      }\n    },\n    {\n      \"name\": \"hashtagPosition\",\n      \"in\": \"query\",\n      \"required\": false,\n      \"schema\": {\n        \"type\": \"string",
+        "json_valid": true,
+        "openapi_valid": true,
+        "fields": {
+          "summary": false,
+          "responses": true,
+          "description": true,
+          "parameters": true,
+          "requestBody": false,
+          "operationId": false,
+          "tags": false
+        },
+        "bleu": 0.05169515944009214,
+        "time_seconds": 5.61
+      }
+    },
+    {
+      "qwen2.5-coder:3b": {
+        "raw_output": "```json\n{\n  \"openapi\": \"3.0.1\",\n  \"info\": {\n    \"title\": \"API Documentation\",\n    \"version\": \"1.0.0\"\n  },\n  \"paths\": {\n    \"/nh/furniture/{furniture}\": {\n      \"get\": {\n        \"summary\": \"Retrieve information about a specific furniture in *Animal Crossing: New Horizons*\",\n        \"description\": \"This endpoint retrieves all furniture items from the database.\",\n        \"parameters\": [\n          {\n            \"name\": \"furniture\",\n            \"in\": \"path\",\n            \"required\": true,\n            ",
+        "json_valid": true,
+        "openapi_valid": false,
+        "fields": {
+          "summary": false,
+          "responses": false,
+          "description": false,
+          "parameters": false,
+          "requestBody": false,
+          "operationId": false,
+          "tags": false
+        },
+        "bleu": 0.05185113098819167,
+        "time_seconds": 7.37
+      },
+      "swaggerlm": {
+        "raw_output": "{\n  \"description\": \"Retrieve information about a specific furniture in *Animal Crossing: New Horizons*.\\n\\n**Note:** This endpoint is only available to users with the `nh_furniture` scope.\",\n  \"parameters\": [\n    {\n      \"name\": \"furniture\",\n      \"in\": \"path\",\n      \"required\": true,\n      \"description\": \"The ID of the furniture item to retrieve. You can find this by searching for the item in the game or using the [Furniture Search API](https://api.furaffinity.net/docs/furniture/search/).\",\n   ",
+        "json_valid": true,
+        "openapi_valid": true,
+        "fields": {
+          "summary": false,
+          "responses": true,
+          "description": true,
+          "parameters": true,
+          "requestBody": false,
+          "operationId": false,
+          "tags": false
+        },
+        "bleu": 0.03802398553310146,
+        "time_seconds": 5.85
+      }
+    },
+    {
+      "qwen2.5-coder:3b": {
+        "raw_output": "```json\n{\n  \"openapi\": \"3.0.1\",\n  \"info\": {\n    \"title\": \"FastAPI API Documentation\",\n    \"version\": \"1.0.0\"\n  },\n  \"paths\": {\n    \"/health\": {\n      \"get\": {\n        \"summary\": \"Health check endpoint - verifies handler initialization status.\",\n        \"description\": \"Returns 503 if handler is not initialized, 200 otherwise.\\nIn multi-handler mode reports the number of loaded models.\",\n        \"responses\": {\n          \"200\": {\n            \"description\": \"Handler is healthy\",\n            \"content",
+        "json_valid": true,
+        "openapi_valid": false,
+        "fields": {
+          "summary": false,
+          "responses": false,
+          "description": false,
+          "parameters": false,
+          "requestBody": false,
+          "operationId": false,
+          "tags": false
+        },
+        "bleu": 0.003293966088254282,
+        "time_seconds": 6.89
+      },
+      "swaggerlm": {
+        "raw_output": "{\n  \"path\": \"/health\",\n  \"method\": \"get\",\n  \"operation\": {\n    \"summary\": \"Health check endpoint - verifies handler initialization status.\",\n    \"operationId\": \"health\",\n    \"parameters\": [],\n    \"responses\": {\n      \"200\": {\n        \"description\": \"Successful response\",\n        \"content\": {\n          \"application/json\": {\n            \"schema\": {\n              \"type\": \"object\"\n            }\n          }\n        }\n      },\n      \"422\": {\n        \"description\": \"Validation Error\"\n      }\n    },\n   ",
+        "json_valid": true,
+        "openapi_valid": true,
+        "fields": {
+          "summary": true,
+          "responses": true,
+          "description": false,
+          "parameters": true,
+          "requestBody": false,
+          "operationId": true,
+          "tags": true
+        },
+        "bleu": 0.008425092684382754,
+        "time_seconds": 3.46
+      }
+    },
+    {
+      "qwen2.5-coder:3b": {
+        "raw_output": "```json\n{\n  \"openapi\": \"3.0.1\",\n  \"info\": {\n    \"title\": \"API Documentation\",\n    \"version\": \"1.0.0\"\n  },\n  \"paths\": {\n    \"/repos/{owner}/{repo}/languages\": {\n      \"get\": {\n        \"summary\": \"Get languages and number of bytes of code written\",\n        \"description\": \"Retrieve the programming languages used in a repository along with their respective byte counts.\",\n        \"parameters\": [\n          {\n            \"name\": \"owner\",\n            \"in\": \"path\",\n            \"required\": true,\n         ",
+        "json_valid": true,
+        "openapi_valid": false,
+        "fields": {
+          "summary": false,
+          "responses": false,
+          "description": false,
+          "parameters": false,
+          "requestBody": false,
+          "operationId": false,
+          "tags": false
+        },
+        "bleu": 0.12420919680641469,
+        "time_seconds": 7.36
+      },
+      "swaggerlm": {
+        "raw_output": "{\n  \"description\": \"Get languages and number of bytes of code written\",\n  \"parameters\": [\n    {\n      \"name\": \"owner\",\n      \"in\": \"path\",\n      \"required\": true,\n      \"schema\": {\n        \"type\": \"string\"\n      }\n    },\n    {\n      \"name\": \"repo\",\n      \"in\": \"path\",\n      \"required\": true,\n      \"schema\": {\n        \"type\": \"string\"\n      }\n    }\n  ],\n  \"responses\": {\n    \"200\": {\n      \"description\": \"\",\n      \"content\": {\n        \"application/json\": {\n          \"schema\": {\n            \"type\":",
+        "json_valid": true,
+        "openapi_valid": true,
+        "fields": {
+          "summary": false,
+          "responses": true,
+          "description": true,
+          "parameters": true,
+          "requestBody": false,
+          "operationId": false,
+          "tags": false
+        },
+        "bleu": 0.11876359530468193,
+        "time_seconds": 3.93
+      }
+    },
+    {
+      "qwen2.5-coder:3b": {
+        "raw_output": "```json\n{\n  \"openapi\": \"3.0.1\",\n  \"info\": {\n    \"title\": \"API Documentation\",\n    \"version\": \"1.0.0\"\n  },\n  \"paths\": {\n    \"/food/branded/name.php\": {\n      \"get\": {\n        \"summary\": \"Search for branded food items by name\",\n        \"description\": \"\",\n        \"parameters\": [\n          {\n            \"name\": \"name\",\n            \"in\": \"query\",\n            \"required\": true,\n            \"schema\": {\n              \"type\": \"string\"\n            }\n          },\n          {\n            \"name\": \"limit\",\n   ",
+        "json_valid": false,
+        "openapi_valid": false,
+        "fields": {
+          "summary": false,
+          "responses": false,
+          "description": false,
+          "parameters": false,
+          "requestBody": false,
+          "operationId": false,
+          "tags": false
+        },
+        "bleu": 0.19378356556055007,
+        "time_seconds": 7.85
+      },
+      "swaggerlm": {
+        "raw_output": "{\n  \"description\": \"## Search for branded food items by name\\n\",\n  \"parameters\": [\n    {\n      \"name\": \"name\",\n      \"in\": \"query\",\n      \"required\": true,\n      \"schema\": {\n        \"type\": \"string\"\n      }\n    },\n    {\n      \"name\": \"limit\",\n      \"in\": \"query\",\n      \"required\": false,\n      \"schema\": {\n        \"type\": \"integer\"\n      }\n    },\n    {\n      \"name\": \"page\",\n      \"in\": \"query\",\n      \"required\": false,\n      \"schema\": {\n        \"type\": \"integer\"\n      }\n    }\n  ],\n  \"responses\": ",
+        "json_valid": true,
+        "openapi_valid": true,
+        "fields": {
+          "summary": false,
+          "responses": true,
+          "description": true,
+          "parameters": true,
+          "requestBody": false,
+          "operationId": false,
+          "tags": false
+        },
+        "bleu": 0.00303102614504221,
+        "time_seconds": 4.04
+      }
+    },
+    {
+      "qwen2.5-coder:3b": {
+        "raw_output": "```json\n{\n  \"openapi\": \"3.0.1\",\n  \"info\": {\n    \"title\": \"API Documentation\",\n    \"version\": \"1.0.0\"\n  },\n  \"paths\": {\n    \"/services/labels\": {\n      \"get\": {\n        \"summary\": \"Get the already used labels for Services\",\n        \"description\": \"This endpoint retrieves all labels that are currently in use by services.\",\n        \"responses\": {\n          \"200\": {\n            \"description\": \"A list of Labels objects\",\n            \"content\": {\n              \"application/json\": {\n                \"sc",
+        "json_valid": true,
+        "openapi_valid": false,
+        "fields": {
+          "summary": false,
+          "responses": false,
+          "description": false,
+          "parameters": false,
+          "requestBody": false,
+          "operationId": false,
+          "tags": false
+        },
+        "bleu": 0.0849775619447951,
+        "time_seconds": 7.13
+      },
+      "swaggerlm": {
+        "raw_output": "{\n  \"description\": \"Get the already used labels for Services\",\n  \"operationId\": \"getServiceLabels\",\n  \"responses\": {\n    \"200\": {\n      \"description\": \"OK\"\n    }\n  },\n  \"path\": \"/services/labels\",\n  \"method\": \"get\"\n}",
+        "json_valid": true,
+        "openapi_valid": true,
+        "fields": {
+          "summary": false,
+          "responses": true,
+          "description": true,
+          "parameters": false,
+          "requestBody": false,
+          "operationId": true,
+          "tags": false
+        },
+        "bleu": 0.03768563588046844,
+        "time_seconds": 1.28
+      }
+    },
+    {
+      "qwen2.5-coder:3b": {
+        "raw_output": "```json\n{\n  \"openapi\": \"3.0.1\",\n  \"info\": {\n    \"title\": \"API Documentation\",\n    \"version\": \"1.0.0\"\n  },\n  \"paths\": {\n    \"/v1/accounts/{ican}/transactions/filter\": {\n      \"get\": {\n        \"summary\": \"Retrieve a filtered list of transactions against an account\",\n        \"description\": \"This endpoint retrieves a list of transactions for a specific account, filtered by date range and transaction types. The search keyword can also be used to filter the results.\",\n        \"parameters\": [\n         ",
+        "json_valid": false,
+        "openapi_valid": false,
+        "fields": {
+          "summary": false,
+          "responses": false,
+          "description": false,
+          "parameters": false,
+          "requestBody": false,
+          "operationId": false,
+          "tags": false
+        },
+        "bleu": 0.3214436919544116,
+        "time_seconds": 9.53
+      },
+      "swaggerlm": {
+        "raw_output": "{\n  \"summary\": \"Retrieve a filtered list of transactions against an account\",\n  \"operationId\": \"getTransactionsByAccountIdFiltered\",\n  \"tags\": [\n    \"Accounts\"\n  ],\n  \"parameters\": [\n    {\n      \"name\": \"ican\",\n      \"in\": \"path\",\n      \"required\": true,\n      \"description\": \"The unique identifier for the account.\",\n      \"schema\": {\n        \"type\": \"integer\"\n      }\n    },\n    {\n      \"name\": \"dateRangeFrom\",\n      \"in\": \"query\",\n      \"required\": true,\n      \"description\": \"The start date of t",
+        "json_valid": true,
+        "openapi_valid": true,
+        "fields": {
+          "summary": true,
+          "responses": true,
+          "description": false,
+          "parameters": true,
+          "requestBody": false,
+          "operationId": true,
+          "tags": true
+        },
+        "bleu": 0.09543231020264493,
+        "time_seconds": 8.75
+      }
+    },
+    {
+      "qwen2.5-coder:3b": {
+        "raw_output": "```json\n{\n  \"openapi\": \"3.0.1\",\n  \"info\": {\n    \"title\": \"API Documentation\",\n    \"version\": \"1.0.0\"\n  },\n  \"paths\": {\n    \"/v3/repricer/strategy/{strategyCollectionId}\": {\n      \"delete\": {\n        \"summary\": \"Deletes the strategy\",\n        \"description\": \"This endpoint deletes a specific strategy based on its collection ID.\",\n        \"parameters\": [\n          {\n            \"name\": \"strategyCollectionId\",\n            \"in\": \"path\",\n            \"required\": true,\n            \"schema\": {\n          ",
+        "json_valid": true,
+        "openapi_valid": false,
+        "fields": {
+          "summary": false,
+          "responses": false,
+          "description": false,
+          "parameters": false,
+          "requestBody": false,
+          "operationId": false,
+          "tags": false
+        },
+        "bleu": 0.0026020131202722555,
+        "time_seconds": 3.99
+      },
+      "swaggerlm": {
+        "raw_output": "{\n  \"description\": \"Deletes the strategy\",\n  \"parameters\": [\n    {\n      \"name\": \"strategyCollectionId\",\n      \"in\": \"path\",\n      \"required\": true,\n      \"schema\": {\n        \"type\": \"string\"\n      }\n    }\n  ],\n  \"responses\": {\n    \"204\": {\n      \"description\": \"No Content\"\n    },\n    \"401\": {\n      \"description\": \"Unauthorized\"\n    },\n    \"403\": {\n      \"description\": \"Forbidden\"\n    }\n  },\n  \"path\": \"/v3/repricer/strategy/{strategyCollectionId}\",\n  \"method\": \"delete\"\n}",
+        "json_valid": true,
+        "openapi_valid": true,
+        "fields": {
+          "summary": false,
+          "responses": true,
+          "description": true,
+          "parameters": true,
+          "requestBody": false,
+          "operationId": false,
+          "tags": false
+        },
+        "bleu": 0.00020235935703160333,
+        "time_seconds": 2.55
+      }
+    },
+    {
+      "qwen2.5-coder:3b": {
+        "raw_output": "```json\n{\n  \"openapi\": \"3.0.1\",\n  \"info\": {\n    \"title\": \"API Documentation\",\n    \"version\": \"1.0.0\"\n  },\n  \"paths\": {\n    \"/v1/{namespace}/projects/{project}\": {\n      \"patch\": {\n        \"summary\": \"Update a project\",\n        \"description\": \"\",\n        \"parameters\": [\n          {\n            \"name\": \"namespace\",\n            \"in\": \"path\",\n            \"required\": true,\n            \"schema\": {\n              \"type\": \"string\"\n            }\n          },\n          {\n            \"name\": \"project\",\n    ",
+        "json_valid": true,
+        "openapi_valid": false,
+        "fields": {
+          "summary": false,
+          "responses": false,
+          "description": false,
+          "parameters": false,
+          "requestBody": false,
+          "operationId": false,
+          "tags": false
+        },
+        "bleu": 0.021216928792901595,
+        "time_seconds": 4.22
+      },
+      "swaggerlm": {
+        "raw_output": "{\n  \"description\": \"Update a project\",\n  \"parameters\": [\n    {\n      \"name\": \"namespace\",\n      \"in\": \"path\",\n      \"required\": true,\n      \"schema\": {\n        \"type\": \"string\"\n      }\n    },\n    {\n      \"name\": \"project\",\n      \"in\": \"path\",\n      \"required\": true,\n      \"schema\": {\n        \"type\": \"string\"\n      }\n    }\n  ],\n  \"responses\": {\n    \"200\": {\n      \"description\": \"Successful response\",\n      \"content\": {\n        \"application/json\": {\n          \"schema\": {\n            \"type\": \"objec",
+        "json_valid": true,
+        "openapi_valid": true,
+        "fields": {
+          "summary": false,
+          "responses": true,
+          "description": true,
+          "parameters": true,
+          "requestBody": false,
+          "operationId": false,
+          "tags": false
+        },
+        "bleu": 0.014657745009081333,
+        "time_seconds": 3.63
+      }
+    },
+    {
+      "qwen2.5-coder:3b": {
+        "raw_output": "```json\n{\n  \"openapi\": \"3.0.1\",\n  \"info\": {\n    \"title\": \"API Documentation\",\n    \"version\": \"1.0.0\"\n  },\n  \"paths\": {\n    \"/weekend_endpoint\": {\n      \"get\": {\n        \"summary\": \"Weekend Access Endpoint\",\n        \"description\": \"This endpoint provides information about weekend access.\",\n        \"responses\": {\n          \"200\": {\n            \"description\": \"Successful response with message and details\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n    ",
+        "json_valid": true,
+        "openapi_valid": false,
+        "fields": {
+          "summary": false,
+          "responses": false,
+          "description": false,
+          "parameters": false,
+          "requestBody": false,
+          "operationId": false,
+          "tags": false
+        },
+        "bleu": 0.008720695571682532,
+        "time_seconds": 5.77
+      },
+      "swaggerlm": {
+        "raw_output": "{\n  \"path\": \"/weekend\",\n  \"method\": \"get\",\n  \"operation\": {\n    \"summary\": \"Weekend Endpoint\",\n    \"operationId\": \"weekend_endpoint\",\n    \"responses\": {\n      \"200\": {\n        \"description\": \"Successful response\",\n        \"content\": {\n          \"application/json\": {\n            \"schema\": {\n              \"type\": \"object\"\n            }\n          }\n        }\n      },\n      \"422\": {\n        \"description\": \"Validation Error\"\n      }\n    },\n    \"tags\": [\n      \"Weekend\"\n    ]\n  }\n}",
+        "json_valid": true,
+        "openapi_valid": true,
+        "fields": {
+          "summary": true,
+          "responses": true,
+          "description": false,
+          "parameters": false,
+          "requestBody": false,
+          "operationId": true,
+          "tags": true
+        },
+        "bleu": 0.020556265779656545,
+        "time_seconds": 2.32
+      }
+    },
+    {
+      "qwen2.5-coder:3b": {
+        "raw_output": "```json\n{\n  \"openapi\": \"3.0.1\",\n  \"info\": {\n    \"title\": \"API Documentation\",\n    \"version\": \"1.0.0\"\n  },\n  \"paths\": {\n    \"/api/\": {\n      \"get\": {\n        \"summary\": \"ApiVersion about\",\n        \"description\": \"\",\n        \"responses\": {\n          \"200\": {\n            \"description\": \"A list of Api objects\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"type\": \"array\",\n                  \"items\": {\n                    \"$ref\": \"#/compone",
+        "json_valid": false,
+        "openapi_valid": false,
+        "fields": {
+          "summary": false,
+          "responses": false,
+          "description": false,
+          "parameters": false,
+          "requestBody": false,
+          "operationId": false,
+          "tags": false
+        },
+        "bleu": 0.0578448832214673,
+        "time_seconds": 6.23
+      },
+      "swaggerlm": {
+        "raw_output": "{\n  \"summary\": \"ApiVersion about\",\n  \"operationId\": \"about_api_version\",\n  \"responses\": {\n    \"200\": {\n      \"description\": \"Successful response\"\n    }\n  },\n  \"path\": \"/api/\",\n  \"method\": \"get\"\n}",
+        "json_valid": true,
+        "openapi_valid": true,
+        "fields": {
+          "summary": true,
+          "responses": true,
+          "description": false,
+          "parameters": false,
+          "requestBody": false,
+          "operationId": true,
+          "tags": false
+        },
+        "bleu": 0.013461388338273013,
+        "time_seconds": 1.6
+      }
+    },
+    {
+      "qwen2.5-coder:3b": {
+        "raw_output": "```json\n{\n  \"openapi\": \"3.0.1\",\n  \"info\": {\n    \"title\": \"API Documentation\",\n    \"version\": \"1.0.0\"\n  },\n  \"paths\": {\n    \"/admin/devices/{systemKey}\": {\n      \"put\": {\n        \"summary\": \"Updates all devices matching the filters specified by a query\",\n        \"description\": \"\",\n        \"parameters\": [\n          {\n            \"name\": \"systemKey\",\n            \"in\": \"path\",\n            \"required\": true,\n            \"schema\": {\n              \"type\": \"string\"\n            }\n          }\n        ],\n  ",
+        "json_valid": true,
+        "openapi_valid": false,
+        "fields": {
+          "summary": false,
+          "responses": false,
+          "description": false,
+          "parameters": false,
+          "requestBody": false,
+          "operationId": false,
+          "tags": false
+        },
+        "bleu": 0.053043914795490615,
+        "time_seconds": 4.28
+      },
+      "swaggerlm": {
+        "raw_output": "{\n  \"description\": \"Updates all devices matching the filters specified by a query. The update is applied to all devices that match the filter criteria.\",\n  \"parameters\": [\n    {\n      \"name\": \"systemKey\",\n      \"in\": \"path\",\n      \"required\": true,\n      \"description\": \"The system key of the device\"\n    }\n  ],\n  \"responses\": {\n    \"200\": {\n      \"description\": \"OK\"\n    },\n    \"401\": {\n      \"description\": \"Unauthorized\"\n    }\n  },\n  \"path\": \"/admin/devices/{systemKey}\",\n  \"method\": \"put\"\n}",
+        "json_valid": true,
+        "openapi_valid": true,
+        "fields": {
+          "summary": false,
+          "responses": true,
+          "description": true,
+          "parameters": true,
+          "requestBody": false,
+          "operationId": false,
+          "tags": false
+        },
+        "bleu": 0.041925818415708575,
+        "time_seconds": 2.48
+      }
+    },
+    {
+      "qwen2.5-coder:3b": {
+        "raw_output": "```json\n{\n  \"openapi\": \"3.0.1\",\n  \"info\": {\n    \"title\": \"API Documentation\",\n    \"version\": \"1.0.0\"\n  },\n  \"paths\": {\n    \"/person/register\": {\n      \"post\": {\n        \"summary\": \"Registers a new person\",\n        \"description\": \"This endpoint registers a new person with the provided details.\",\n        \"requestBody\": {\n          \"required\": true,\n          \"content\": {\n            \"application/json\": {\n              \"schema\": {\n                \"$ref\": \"#/components/schemas/Register\"\n            ",
+        "json_valid": true,
+        "openapi_valid": false,
+        "fields": {
+          "summary": false,
+          "responses": false,
+          "description": false,
+          "parameters": false,
+          "requestBody": false,
+          "operationId": false,
+          "tags": false
+        },
+        "bleu": 0.03736202904431441,
+        "time_seconds": 5.85
+      },
+      "swaggerlm": {
+        "raw_output": "{\n  \"description\": \"Registers a new person\",\n  \"requestBody\": {\n    \"required\": true,\n    \"content\": {\n      \"application/json\": {\n        \"schema\": {\n          \"type\": \"object\"\n        }\n      }\n    }\n  },\n  \"responses\": {\n    \"200\": {\n      \"description\": \"Successful response\",\n      \"content\": {\n        \"application/json\": {\n          \"schema\": {\n            \"type\": \"object\"\n          }\n        }\n      }\n    },\n    \"401\": {\n      \"description\": \"Unauthorized\"\n    }\n  },\n  \"path\": \"/person/reg",
+        "json_valid": true,
+        "openapi_valid": true,
+        "fields": {
+          "summary": false,
+          "responses": true,
+          "description": true,
+          "parameters": false,
+          "requestBody": true,
+          "operationId": false,
+          "tags": false
+        },
+        "bleu": 0.029954479539491305,
+        "time_seconds": 2.6
+      }
+    },
+    {
+      "qwen2.5-coder:3b": {
+        "raw_output": "```json\n{\n  \"openapi\": \"3.0.1\",\n  \"info\": {\n    \"title\": \"API Documentation\",\n    \"version\": \"1.0.0\"\n  },\n  \"paths\": {\n    \"/admin/services\": {\n      \"get\": {\n        \"summary\": \"Retrieve services for admin users\",\n        \"description\": \"This endpoint retrieves a list of services associated with admin users.\",\n        \"parameters\": [\n          {\n            \"name\": \"access_token\",\n            \"in\": \"header\",\n            \"required\": true,\n            \"schema\": {\n              \"type\": \"string\"\n  ",
+        "json_valid": true,
+        "openapi_valid": false,
+        "fields": {
+          "summary": false,
+          "responses": false,
+          "description": false,
+          "parameters": false,
+          "requestBody": false,
+          "operationId": false,
+          "tags": false
+        },
+        "bleu": 0.00985546391537328,
+        "time_seconds": 5.98
+      },
+      "swaggerlm": {
+        "raw_output": "{\n  \"path\": \"/services\",\n  \"method\": \"get\",\n  \"operation\": {\n    \"summary\": \"Admin Services\",\n    \"operationId\": \"admin_services\",\n    \"parameters\": [\n      {\n        \"name\": \"access_token\",\n        \"in\": \"query\",\n        \"required\": false,\n        \"schema\": {\n          \"type\": \"string\"\n        }\n      }\n    ],\n    \"responses\": {\n      \"200\": {\n        \"description\": \"Successful response\",\n        \"content\": {\n          \"application/json\": {\n            \"schema\": {\n              \"type\": \"object\"",
+        "json_valid": true,
+        "openapi_valid": true,
+        "fields": {
+          "summary": true,
+          "responses": true,
+          "description": false,
+          "parameters": true,
+          "requestBody": false,
+          "operationId": true,
+          "tags": true
+        },
+        "bleu": 0.0318738348867916,
+        "time_seconds": 3.63
+      }
+    },
+    {
+      "qwen2.5-coder:3b": {
+        "raw_output": "```json\n{\n  \"openapi\": \"3.0.1\",\n  \"info\": {\n    \"title\": \"API Documentation\",\n    \"version\": \"1.0.0\"\n  },\n  \"paths\": {\n    \"/categories/{category}/channel/{channel}/4od/popular/page-{pageno}.atom\": {\n      \"get\": {\n        \"summary\": \"Lists all Channel 4oD most popular brands for the given category within the last 7 days, in order of popularity\",\n        \"description\": \"This endpoint retrieves a list of the most popular brands from Channel 4oD for a specified category and page number. The result",
+        "json_valid": true,
+        "openapi_valid": false,
+        "fields": {
+          "summary": false,
+          "responses": false,
+          "description": false,
+          "parameters": false,
+          "requestBody": false,
+          "operationId": false,
+          "tags": false
+        },
+        "bleu": 0.12497308721738123,
+        "time_seconds": 6.91
+      },
+      "swaggerlm": {
+        "raw_output": "{\n  \"description\": \"Lists all Channel 4oD most popular brands for the given category within the last 7 days, in order of popularity.\",\n  \"operationId\": \"most-popular-brands-feed-7\",\n  \"tags\": [\n    \"4od\"\n  ],\n  \"parameters\": [\n    {\n      \"name\": \"param\",\n      \"in\": \"query\",\n      \"required\": false\n    },\n    {\n      \"name\": \"param\",\n      \"in\": \"query\",\n      \"required\": false\n    },\n    {\n      \"name\": \"param\",\n      \"in\": \"query\",\n      \"required\": false\n    },\n    {\n      \"name\": \"param\",\n ",
+        "json_valid": true,
+        "openapi_valid": true,
+        "fields": {
+          "summary": false,
+          "responses": true,
+          "description": true,
+          "parameters": true,
+          "requestBody": false,
+          "operationId": true,
+          "tags": true
+        },
+        "bleu": 0.31308752690453073,
+        "time_seconds": 3.99
+      }
+    },
+    {
+      "qwen2.5-coder:3b": {
+        "raw_output": "```json\n{\n  \"openapi\": \"3.0.1\",\n  \"info\": {\n    \"title\": \"API Documentation\",\n    \"version\": \"1.0.0\"\n  },\n  \"paths\": {\n    \"/StopPoint/Mode/{modes}/Disruption\": {\n      \"get\": {\n        \"summary\": \"Gets a distinct list of disrupted stop points for the given modes\",\n        \"description\": \"This endpoint retrieves a list of disrupted stop points based on the specified modes. It also allows for optional filtering to include route blocked stops.\",\n        \"parameters\": [\n          {\n            \"nam",
+        "json_valid": true,
+        "openapi_valid": false,
+        "fields": {
+          "summary": false,
+          "responses": false,
+          "description": false,
+          "parameters": false,
+          "requestBody": false,
+          "operationId": false,
+          "tags": false
+        },
+        "bleu": 0.1262689649093497,
+        "time_seconds": 6.65
+      },
+      "swaggerlm": {
+        "raw_output": "{\n  \"description\": \"Gets a distinct list of disrupted stop points for the given modes\",\n  \"parameters\": [\n    {\n      \"name\": \"modes\",\n      \"in\": \"path\",\n      \"required\": true,\n      \"schema\": {\n        \"type\": \"array\"\n      }\n    },\n    {\n      \"name\": \"includeRouteBlockedStops\",\n      \"in\": \"query\",\n      \"required\": false,\n      \"description\": \"Include route blocked stops in the response.\",\n      \"schema\": {\n        \"type\": \"boolean\"\n      }\n    }\n  ],\n  \"responses\": {\n    \"200\": {\n      \"d",
+        "json_valid": true,
+        "openapi_valid": true,
+        "fields": {
+          "summary": false,
+          "responses": true,
+          "description": true,
+          "parameters": true,
+          "requestBody": false,
+          "operationId": false,
+          "tags": false
+        },
+        "bleu": 0.14045261170598936,
+        "time_seconds": 3.82
+      }
+    },
+    {
+      "qwen2.5-coder:3b": {
+        "raw_output": "```json\n{\n  \"openapi\": \"3.0.1\",\n  \"info\": {\n    \"title\": \"API Documentation\",\n    \"version\": \"1.0.0\"\n  },\n  \"paths\": {\n    \"/calendar_event_response\": {\n      \"post\": {\n        \"summary\": \"Create a calendar event response for an attendee of a calendar event, the attendee can be a coach or patient\",\n        \"description\": \"\",\n        \"operationId\": \"createcalendareventresponse\",\n        \"parameters\": [],\n        \"requestBody\": {\n          \"required\": true,\n          \"content\": {\n            \"appl",
+        "json_valid": false,
+        "openapi_valid": false,
+        "fields": {
+          "summary": false,
+          "responses": false,
+          "description": false,
+          "parameters": false,
+          "requestBody": false,
+          "operationId": false,
+          "tags": false
+        },
+        "bleu": 0.3768585621152391,
+        "time_seconds": 5.13
+      },
+      "swaggerlm": {
+        "raw_output": "{\n  \"description\": \"Create a calendar event response for an attendee of a calendar event, the attendee can be a coach or patient.\",\n  \"requestBody\": {\n    \"required\": true,\n    \"content\": {\n      \"application/json\": {\n        \"schema\": {\n          \"type\": \"object\"\n        }\n      }\n    }\n  },\n  \"responses\": {\n    \"201\": {\n      \"description\": \"Created\"\n    },\n    \"400\": {\n      \"description\": \"Bad Request\"\n    },\n    \"401\": {\n      \"description\": \"Unauthorized\"\n    }\n  },\n  \"path\": \"/calendar_ev",
+        "json_valid": true,
+        "openapi_valid": true,
+        "fields": {
+          "summary": false,
+          "responses": true,
+          "description": true,
+          "parameters": false,
+          "requestBody": true,
+          "operationId": false,
+          "tags": false
+        },
+        "bleu": 0.05407846220970149,
+        "time_seconds": 2.85
+      }
+    },
+    {
+      "qwen2.5-coder:3b": {
+        "raw_output": "```json\n{\n  \"openapi\": \"3.0.1\",\n  \"info\": {\n    \"title\": \"API Documentation\",\n    \"version\": \"1.0.0\"\n  },\n  \"paths\": {\n    \"/regions/{source_language}\": {\n      \"get\": {\n        \"summary\": \"Returns a list of the available [regions](documentation/glossary?term=regions) for a given monolingual language dataset\",\n        \"description\": \"This endpoint returns a list of regions associated with a specific source language. The `param` and `param` parameters are optional.\",\n        \"parameters\": [\n     ",
+        "json_valid": true,
+        "openapi_valid": false,
+        "fields": {
+          "summary": false,
+          "responses": false,
+          "description": false,
+          "parameters": false,
+          "requestBody": false,
+          "operationId": false,
+          "tags": false
+        },
+        "bleu": 0.12957654047607153,
+        "time_seconds": 6.8
+      },
+      "swaggerlm": {
+        "raw_output": "{\n  \"description\": \"Returns a list of the available [regions](documentation/glossary?term=regions) for a given monolingual language dataset.\",\n  \"operationId\": \"get_regions_source_language\",\n  \"tags\": [\n    \"regions\"\n  ],\n  \"parameters\": [\n    {\n      \"name\": \"source_language\",\n      \"in\": \"path\",\n      \"required\": true,\n      \"description\": \"The ISO-639-1 code of the language for which to get the regions.\",\n      \"schema\": {\n        \"type\": \"string\"\n      }\n    },\n    {\n      \"name\": \"param\",\n ",
+        "json_valid": true,
+        "openapi_valid": true,
+        "fields": {
+          "summary": false,
+          "responses": true,
+          "description": true,
+          "parameters": true,
+          "requestBody": false,
+          "operationId": true,
+          "tags": true
+        },
+        "bleu": 0.16716794730514206,
+        "time_seconds": 5.84
+      }
+    },
+    {
+      "qwen2.5-coder:3b": {
+        "raw_output": "```json\n{\n  \"openapi\": \"3.0.2\",\n  \"info\": {\n    \"title\": \"API Documentation\",\n    \"version\": \"1.0.0\"\n  },\n  \"paths\": {\n    \"/v1/merge_documents\": {\n      \"post\": {\n        \"summary\": \"Combine multiple PDF documents into a single PDF document\",\n        \"description\": \"This endpoint allows you to merge multiple PDF documents into a single PDF document.\",\n        \"requestBody\": {\n          \"required\": true,\n          \"content\": {\n            \"application/json\": {\n              \"schema\": {\n         ",
+        "json_valid": true,
+        "openapi_valid": false,
+        "fields": {
+          "summary": false,
+          "responses": false,
+          "description": false,
+          "parameters": false,
+          "requestBody": false,
+          "operationId": false,
+          "tags": false
+        },
+        "bleu": 0.11494959782282721,
+        "time_seconds": 5.39
+      },
+      "swaggerlm": {
+        "raw_output": "{\n  \"description\": \"Combine multiple PDF documents into a single PDF document\",\n  \"requestBody\": {\n    \"required\": true,\n    \"content\": {\n      \"application/json\": {\n        \"schema\": {\n          \"type\": \"object\"\n        }\n      }\n    }\n  },\n  \"responses\": {\n    \"200\": {\n      \"description\": \"OK\",\n      \"content\": {\n        \"application/json\": {\n          \"schema\": {\n            \"type\": \"object\"\n          }\n        }\n      }\n    }\n  },\n  \"path\": \"/v1/merge_documents\",\n  \"method\": \"post\"\n}",
+        "json_valid": true,
+        "openapi_valid": true,
+        "fields": {
+          "summary": false,
+          "responses": true,
+          "description": true,
+          "parameters": false,
+          "requestBody": true,
+          "operationId": false,
+          "tags": false
+        },
+        "bleu": 0.11433745076932943,
+        "time_seconds": 2.45
+      }
+    },
+    {
+      "qwen2.5-coder:3b": {
+        "raw_output": "```json\n{\n  \"openapi\": \"3.0.1\",\n  \"info\": {\n    \"title\": \"Company API\",\n    \"version\": \"2.0\"\n  },\n  \"paths\": {\n    \"/v2/companies/{companyId}/employees/{employeeId}/emergencyContacts\": {\n      \"put\": {\n        \"summary\": \"Adds or updates employee emergency contacts directly to Web Pay\",\n        \"description\": \"This endpoint allows you to add or update an employee's emergency contact information.\",\n        \"parameters\": [\n          {\n            \"name\": \"companyId\",\n            \"in\": \"path\",\n    ",
+        "json_valid": true,
+        "openapi_valid": false,
+        "fields": {
+          "summary": false,
+          "responses": false,
+          "description": false,
+          "parameters": false,
+          "requestBody": false,
+          "operationId": false,
+          "tags": false
+        },
+        "bleu": 0.07688648635420527,
+        "time_seconds": 7.62
+      },
+      "swaggerlm": {
+        "raw_output": "{\n  \"description\": \"Sends new or updated employee emergency contacts directly to Web Pay.\",\n  \"parameters\": [\n    {\n      \"name\": \"companyId\",\n      \"in\": \"path\",\n      \"required\": true,\n      \"schema\": {\n        \"type\": \"string\"\n      }\n    },\n    {\n      \"name\": \"employeeId\",\n      \"in\": \"path\",\n      \"required\": true,\n      \"schema\": {\n        \"type\": \"string\"\n      }\n    }\n  ],\n  \"requestBody\": {\n    \"required\": true,\n    \"content\": {\n      \"application/json\": {\n        \"schema\": {\n         ",
+        "json_valid": true,
+        "openapi_valid": true,
+        "fields": {
+          "summary": false,
+          "responses": true,
+          "description": true,
+          "parameters": true,
+          "requestBody": true,
+          "operationId": false,
+          "tags": false
+        },
+        "bleu": 0.06622606681428922,
+        "time_seconds": 4.11
+      }
+    },
+    {
+      "qwen2.5-coder:3b": {
+        "raw_output": "```json\n{\n  \"openapi\": \"3.0.1\",\n  \"info\": {\n    \"title\": \"API Documentation\",\n    \"version\": \"1.0.0\"\n  },\n  \"paths\": {\n    \"/extractor/{extractorId}/json/latest\": {\n      \"get\": {\n        \"summary\": \"Get the latest crawl run results as json\",\n        \"description\": \"This endpoint retrieves the latest crawl run results for a specified extractor.\",\n        \"parameters\": [\n          {\n            \"name\": \"extractorId\",\n            \"in\": \"path\",\n            \"required\": true,\n            \"schema\": {\n",
+        "json_valid": true,
+        "openapi_valid": false,
+        "fields": {
+          "summary": false,
+          "responses": false,
+          "description": false,
+          "parameters": false,
+          "requestBody": false,
+          "operationId": false,
+          "tags": false
+        },
+        "bleu": 0.1755047840291177,
+        "time_seconds": 4.57
+      },
+      "swaggerlm": {
+        "raw_output": "{\n  \"summary\": \"Get the latest crawl run results as json\",\n  \"operationId\": \"get-extractor-extractorid-json-latest\",\n  \"tags\": [\n    \"extractor\"\n  ],\n  \"parameters\": [\n    {\n      \"name\": \"extractorId\",\n      \"in\": \"path\",\n      \"required\": true,\n      \"description\": \"The extractor id to get the latest results for.\"\n    }\n  ],\n  \"responses\": {\n    \"200\": {\n      \"description\": \"OK\"\n    },\n    \"401\": {\n      \"description\": \"Unauthorized\"\n    }\n  },\n  \"path\": \"/extractor/{extractorId}/json/latest\"",
+        "json_valid": true,
+        "openapi_valid": true,
+        "fields": {
+          "summary": true,
+          "responses": true,
+          "description": false,
+          "parameters": true,
+          "requestBody": false,
+          "operationId": true,
+          "tags": true
+        },
+        "bleu": 0.11131352716342813,
+        "time_seconds": 2.82
+      }
+    },
+    {
+      "qwen2.5-coder:3b": {
+        "raw_output": "```json\n{\n  \"openapi\": \"3.0.1\",\n  \"info\": {\n    \"title\": \"Article Search API\",\n    \"version\": \"1.0.0\"\n  },\n  \"paths\": {\n    \"/articles/search/{query}\": {\n      \"get\": {\n        \"summary\": \"Searches through all articles and returns a JSON array with search results\",\n        \"description\": \"This endpoint allows you to search for articles based on various criteria such as query, page number, page size, metadata, fulltext search, citations, similar articles, duplicate articles, URLs, faithful metada",
+        "json_valid": false,
+        "openapi_valid": false,
+        "fields": {
+          "summary": false,
+          "responses": false,
+          "description": false,
+          "parameters": false,
+          "requestBody": false,
+          "operationId": false,
+          "tags": false
+        },
+        "bleu": 0.20398515196029982,
+        "time_seconds": 9.14
+      },
+      "swaggerlm": {
+        "raw_output": "{\n  \"summary\": \"Searches through all articles and returns a JSON array with search results\",\n  \"operationId\": \"searchArticles\",\n  \"tags\": [\n    \"articles\"\n  ],\n  \"parameters\": [\n    {\n      \"name\": \"query\",\n      \"in\": \"path\",\n      \"required\": true,\n      \"description\": \"The query to search for. This can be a string or an array of strings.\"\n    },\n    {\n      \"name\": \"page\",\n      \"in\": \"query\",\n      \"required\": false,\n      \"description\": \"The page number to return. Defaults to 1\"\n    },\n    ",
+        "json_valid": false,
+        "openapi_valid": false,
+        "fields": {
+          "summary": false,
+          "responses": false,
+          "description": false,
+          "parameters": false,
+          "requestBody": false,
+          "operationId": false,
+          "tags": false
+        },
+        "bleu": 0.3050822905092829,
+        "time_seconds": 8.95
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+============================================================
+  APIs.guru Miner — Report
+  Generated : 2026-05-21 17:15:49
+============================================================
+
+FILE STATISTICS:
+  Specs scanned     :    2,658
+  Specs failed      :       17
+  Providers         :      656
+
+OPERATION PIPELINE:
+  Operations found  :  125,162
+  Rejected (no sum) :    7,269
+  Rejected (simple) :        0
+  Rejected (complex):      900
+  Rejected (dup)    :   19,201
+  Total rejected    :   27,370
+  Accepted          :   97,792  (78.1%)
+
+OUTPUT:
+  apis_guru_20260521_170953.jsonl
+============================================================
